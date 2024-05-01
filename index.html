@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PETSHOP</title>
-   <link rel="icon" type="image/x-icon" href="logo.png">
-   <link rel="stylesheet" href=" design.css">
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <link rel="stylesheet" href="design.css">
 </head>
 
 <body>
@@ -14,9 +14,9 @@
     <header>
       <h1>PETSHOP</h1>
       <a href="#" class="logo">
-                <img src="logo.png" class="img-logo" alt=" ">
-            </a>
-      
+        <img src="logo.png" class="img-logo" alt=" ">
+      </a>
+
       <nav>
         <ul>
           <li><a href="#" id="loginLink">Login</a></li>
@@ -56,41 +56,66 @@
         </div>
         <div id="content" class="content"></div>
 
-        <body>
-  <div class="image">
-    <img src="contact_img.png" alt="contact_img">
-  </div>
+        <div class="image">
+          <img src="contact_img.png" alt="contact_img">
+        </div>
 
-  <div class="text">
-    <h2>Animals</h2>
-    <p>
-      Animals are multicellular eukaryotic organisms that belong to the kingdom Animalia. They form a diverse group with various characteristics, adaptations, and behaviors. There are millions of known animal species, ranging from microscopic organisms to large mammals. Animals can be found in almost every habitat on Earth, from oceans to forests, deserts, and even urban environments.
-    </p>
+        <div class="text">
+          <h2>Animals</h2>
+          <p>
+            Animals are multicellular eukaryotic organisms that belong to the kingdom Animalia. They form a diverse group with various characteristics, adaptations, and behaviors. There are millions of known animal species, ranging from microscopic organisms to large mammals. Animals can be found in almost every habitat on Earth, from oceans to forests, deserts, and even urban environments.
+          </p>
 
-    <p>
-      Animals play essential roles in ecosystems, contributing to the balance of nature and providing numerous benefits to humans. They assist in pollination, seed dispersal, nutrient cycling, and pest control. Moreover, animals have become important companions and helpers to humans through domestication, providing companionship, transportation, and assistance in various tasks.
-    </p>
+          <p>
+            Animals play essential roles in ecosystems, contributing to the balance of nature and providing numerous benefits to humans. They assist in pollination, seed dispersal, nutrient cycling, and pest control. Moreover, animals have become important companions and helpers to humans through domestication, providing companionship, transportation, and assistance in various tasks.
+          </p>
 
-    <p>
-      However, many animal species are currently facing threats such s habitat loss, pollution, climate change, and illegal wildlife trade. Conservation efforts are vital to protect endangered species and preserve biodiversity for future generations.
-    </p>
-  </div>
-    <footer class="footer">
-        <h2>Contact Us</h2>
-        <p>Get in touch with us for any inquiries or to learn more about our services.</p>
-        <div class="contact-info">
+          <p>
+            However, many animal species are currently facing threats such s habitat loss, pollution, climate change, and illegal wildlife trade. Conservation efforts are vital to protect endangered species and preserve biodiversity for future generations.
+          </p>
+        </div>
+        <footer class="footer">
+          <h2>Contact Us</h2>
+          <p>Get in touch with us for any inquiries or to learn more about our services.</p>
+          <div class="contact-info">
             <p><span>Phone:</span> +63 950-445-4911</p>
             <p><span>Email:</span> markvincentbautista.bsit@gmail.com</p>
             <p><span>Address:</span> Caminawit, San Jose, Occidenal Mindoro </p>
-        </div>
-        <div class="suggestions">
+          </div>
+          <div class="suggestions">
             <h2>Have Suggestions?</h2>
             <p>We value your feedback. Please let us know if you have any suggestions or improvements.</p>
-        </div>
-    </footer>
- 
+          </div>
+        </footer>
+      </div>
+    </main>
+  </div>
 
- <script src="function.js"></script>
+  <script>
+    // Storing email and password in variables (for demonstration purposes only)
+    const userEmail = 'admin@gmail.com';
+    const userPassword = 'admin';
+
+    // Function to check login credentials
+    function checkCredentials(email, password) {
+      return email === userEmail && password === userPassword;
+    }
+
+    // Function to handle login form submission
+    document.getElementById('login').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const email = this.querySelector('input[type="email"]').value;
+      const password = this.querySelector('input[type="password"]').value;
+
+      if (checkCredentials(email, password)) {
+        alert('Login successful');
+        // You can redirect the user to another page or perform other actions here
+      } else {
+        alert('Invalid email or password');
+      }
+    });
+  </script>
 
 </body>
+
 </html>
